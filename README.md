@@ -18,10 +18,12 @@ The total number of votes each candidate won,
 The winner of the election based on popular vote.
 
 Both outputs needed to display the summary onto the Python Terminal and also export the results as a .txt file.
-The Python coding for the analysis of both files are posted here in this repository. The code has an absolute location and need to be changed according the system.
+The Python coding for the analysis of both files are posted here in this repository. **NOTE: The code has an absolute location and need to be changed according the system.**
 
 The data for PyBank is arranged in columns, "Date" and "Profit/Losses".
 The script for the analysis of PyBank has to be used in the current order of the data, if the data needs to be sorted, it has to be sorted by date since the coding analyzes the data sequentially by rows.
 
 The data for PyPoll is arranged in columns, "VoterID", "County", and "Candidate"
 The script for the analysis of PyPoll can be used sorted in any order.
+
+Each Folder contains the code in the main folder, the "resource" folder contains the CSV folder to analyze, and the "analysis" folder ontains the terminal screen capture and the summary output in .txt format.
