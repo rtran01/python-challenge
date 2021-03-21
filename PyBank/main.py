@@ -3,6 +3,15 @@
 # Import CSV File
 import csv
 
+# Import Sys to orint to .txt
+import sys
+
+# Original stdout
+orig = sys.stdout
+
+# .txt file
+txt = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyBank/analysis/PyBoss_Summary.txt"
+
 # File Path on Local Drive
 location = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyBank/Resources/"
 pybankfile = location+"PyBank_Resources_budget_data.csv"
@@ -66,3 +75,14 @@ with open(pybankfile, 'r') as csvfile:
     print(f'Average Change: {round(avchange/len(dif),2)}')
     print(f'Greatest Increase in Profits: {yearg} ({round(greatest)})')
     print(f'Greatest Decrease in Profits: {yearl} ({round(lowest)})')
+
+# export to .txt
+    sys.stdout = open(txt, 'wt')
+    print("Financial Analysis")
+    print("----------------------------")
+    print(f'Total Months: {len(mtot)}')
+    print(f'Total: ${int(sumtot)}')
+    print(f'Average Change: {round(avchange/len(dif),2)}')
+    print(f'Greatest Increase in Profits: {yearg} ({round(greatest)})')
+    print(f'Greatest Decrease in Profits: {yearl} ({round(lowest)})')
+    sys.stdout = orig

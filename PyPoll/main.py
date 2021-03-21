@@ -3,6 +3,15 @@
 # Import CSV File
 import csv
 
+#Import Sys to orint to .txt
+import sys
+
+#return output to original
+orig = sys.stdout
+
+#.txt file
+txt = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyPoll/analysis/PyPoll_Summary.txt"
+
 # File Location on Local Drive
 location = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyPoll/Resources/"
 pypollfile = location+"PyPoll_Resources_election_data.csv"
@@ -76,3 +85,25 @@ with open(pypollfile, "r") as csvfile:
             winnern = f'Winner: {candidate_list[pv]}'
     print(winnern)
     print("-------------------------")
+
+#export to .txt
+    sys.stdout=open(txt,'wt')
+    # Printing of the voting summary
+    print("Election Results")
+    print("-------------------------")
+    print(f'Total Votes: {len(voterid)}')
+    print("-------------------------")
+# f string to print all of the candidates tallies and percentages
+    for d in range(0, len(candidate_list)):
+        print(f'{candidate_list[d]}: {percent[d]:.3%} ({candidate_votes[d]})')
+    print("-------------------------")
+# Created a function to sift through candidate total votes to announce the winner
+    winner = candidate_votes[0]
+    winnern = f'Winner: {candidate_list[0]}'
+    for pv in range(0, len(candidate_votes)-1):
+        if winner < candidate_votes[pv]:
+            winner = candidate_votes[pv]
+            winnern = f'Winner: {candidate_list[pv]}'
+    print(winnern)
+    print("-------------------------")
+    sys.stdout = orig
