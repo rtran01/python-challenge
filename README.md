@@ -18,7 +18,7 @@ The total number of votes each candidate won,
 The winner of the election based on popular vote.
 
 Both outputs needed to display the summary onto the Python Terminal and also export the results as a .txt file.
-The Python coding for the analysis of both files are posted here in this repository. **NOTE: The code has an absolute location and need to be changed according the system.**
+The Python coding for the analysis of both files are posted here in this repository. **NOTE: The codes have an absolute location and needs to be changed according the system.**
 
 The data for PyBank is arranged in columns, "Date" and "Profit/Losses".
 The script for the analysis of PyBank has to be used in the current order of the data, if the data needs to be sorted, it has to be sorted by date since the coding analyzes the data sequentially by rows.
