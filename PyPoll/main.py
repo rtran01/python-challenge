@@ -3,18 +3,20 @@
 # Import CSV File
 import csv
 
-# Import Sys to orint to .txt
+# Import Sys to print to .txt
 import sys
+
+# Import to open files from OS
+import os
 
 # return output to original
 orig = sys.stdout
 
-# .txt file
-txt = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyPoll/analysis/PyPoll_Summary.txt"
+#TXT file to export to
+txt = os.path.join("analysis", "PyPoll_Summary.txt")
 
-# File Location on Local Drive
-location = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyPoll/Resources/"
-pypollfile = location+"PyPoll_Resources_election_data.csv"
+# File Path on Local Drive
+pypollfile = os.path.join("Resources", "PyPoll_Resources_election_data.csv")
 
 # Arrays to Pull Data from CSV
 

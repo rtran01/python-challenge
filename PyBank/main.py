@@ -1,20 +1,21 @@
 # PyBank
+#Import OS for File Navigation
+import os
 
 # Import CSV File
 import csv
 
-# Import Sys to orint to .txt
+# Import Sys to print to .txt
 import sys
 
 # Original stdout
 orig = sys.stdout
 
 # .txt file
-txt = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyBank/analysis/PyBoss_Summary.txt"
+txt = os.path.join("analysis", "PyBank_Summary.txt")
 
 # File Path on Local Drive
-location = "C:/Users/richa/OneDrive/Desktop/Data BootCamp/Homework/Python-Challenge/python-challenge/PyBank/Resources/"
-pybankfile = location+"PyBank_Resources_budget_data.csv"
+pybankfile = os.path.join("Resources", "PyBank_Resources_budget_data.csv")
 
 # Total Months
 mtot = []
