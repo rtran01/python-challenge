@@ -26,4 +26,4 @@ The script for the analysis of PyBank has to be used in the current order of the
 The data for PyPoll is arranged in columns, "VoterID", "County", and "Candidate"
 The script for the analysis of PyPoll can be used sorted in any order.
 
-Each Folder contains the code in the main folder, the "resource" folder contains the CSV folder to analyze, and the "analysis" folder ontains the terminal screen capture and the summary output in .txt format.
+Each Folder contains the code in the main folder, the "resource" folder contains the CSV folder to analyze, and the "analysis" folder contains the terminal screen capture and the summary output in .txt format.
