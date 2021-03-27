@@ -56,7 +56,7 @@ with open(pybankfile, 'r') as csvfile:
         sumtot = sumtot+float(mchange[i])
 
 # Average of all Monthly Changes
-        if i < 85:
+        if i < len(mtot)-1:
             dif.append(float(mchange[i+1])-float(mchange[i]))
             avchange = avchange+dif[i]
 
